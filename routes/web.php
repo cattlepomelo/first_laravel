@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,3 +18,5 @@ Route::get('/test', function () {
 });
 
 Route::get('/about', [AboutController::class, 'index']);
+
+Route::get('/post', [PostController::class, 'showPosts']);
